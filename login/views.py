@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth.forms import AuthenticationForm
+from django.shortcuts import redirect
 
 """
 Falta bloquear para apenas entrar nas paginas usuarios logados e mudar texto para
@@ -22,6 +23,8 @@ def index(request):
 Falta mudar texto que aparece para portugues,
 """
 def registro(request):
+    if not request.user.is_authenticated():
+        return redirect(index)
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -32,4 +35,6 @@ def registro(request):
     return render(request, "registro.html", {"form": UserCreationForm() })
 
 def central(request):
-    return render_to_response("central.html")
+     if not request.user.is_authenticated():
+        return redirect(index)
+     return render_to_response("central.html")
