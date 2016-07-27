@@ -8,4 +8,11 @@
 
 ### Modificações ###
 
-* 26/jun/2016: Criado banco de danos no arquivo login/models.py
+* 26/jun/2016: Criado banco de danos no arquivo login/models.py.
+
+* 27/jun/2016: Criado um novo banco de dados na forma de uma extenção do Perfil
+do usuario cadastrado.
+
+* 27/jun/2016: Criado tela de login simples.
+
+* 27/jun/2016: Criado tela de cadastro simples.
