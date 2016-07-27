@@ -24,7 +24,7 @@ class Perfil(models.Model):
     estado = models.CharField(max_length=2,default="")
     cidade = models.CharField(max_length=200,default="")
     datacadastro = models.DateTimeField(auto_now_add=True)
-    foto = models.ImageField(upload_to='cadastros/%Y',default="")
+    foto = models.ImageField(upload_to='Perfil_img/%Y',default="")
 
     def __unicode__(self):
         return self.nome
