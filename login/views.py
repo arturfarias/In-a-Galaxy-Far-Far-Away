@@ -1,13 +1,12 @@
-from django.shortcuts import render_to_response, render
+from django.shortcuts import render_to_response, render, redirect
 from django.http import HttpResponseRedirect
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login
-from django.contrib.auth.forms import AuthenticationForm
-from django.shortcuts import redirect
+
+
 
 """
-Falta bloquear para apenas entrar nas paginas usuarios logados e mudar texto para
-portugues
+Falta  mudar texto para portugues
 """
 def index(request):
     if request.method == 'POST':
