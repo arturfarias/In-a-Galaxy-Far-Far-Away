@@ -3,7 +3,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 
-# Create your models here.
 class Perfil(models.Model):
     user = models.OneToOneField(User)
 
@@ -29,7 +28,7 @@ class Perfil(models.Model):
     def __unicode__(self):
         return self.nome
 
-# funcao que cria o player toda vez que um usuario for criado pelo Django.contrib.auth
+
 def cria_user_perfil(sender, instance, created, **kwargs):
     if created:
         Perfil.objects.create(user=instance)
