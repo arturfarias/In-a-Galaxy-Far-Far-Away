@@ -1,8 +1,8 @@
-from django.shortcuts import render_to_response, render, redirect
+from django.shortcuts import  render, redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login
-
+from .models import Perfil
 
 
 """
@@ -36,4 +36,10 @@ def registro(request):
 def central(request):
      if not request.user.is_authenticated():
         return redirect(index)
-     return render_to_response("central.html")
+     return render(request,"central.html")
+
+def perfil(request):
+     if not request.user.is_authenticated():
+        return redirect(index)
+     return render(request,"perfil.html",{'username':request.user,
+                                          'perfil':request.user.perfil})

@@ -18,4 +18,6 @@ do usuario cadastrado.
 * 27/jun/2016: Criado tela de cadastro simples.
 
 * 27/jun/2016: Implementado redirecionamento para a pagina de login caso o
-usuario não esteja logado 
+usuario não esteja logado
+
+* 28/jun/2016: Criado Tela de perfil não editavel 
