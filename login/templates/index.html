@@ -1,8 +1,9 @@
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+{% extends 'base.html' %}
 
+{% block content %}
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <input type='submit' value='Logar' />
 </form>
+{% endblock content %}
