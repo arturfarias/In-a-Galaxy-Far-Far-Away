@@ -3,7 +3,8 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login
 from .models import Perfil # importando as informacoes do banco de dados criado na models
-from .forms import CadastroForms
+from .forms import CadastroForms # importacao do formulario feito para ser vinculado ao usuario
+
 # ===============Formulario de login criado na pagina do index==================
 def index(request):
     if request.method == 'POST':
@@ -25,9 +26,9 @@ def registro(request):
         if form.is_valid(): # verifica se e valido
             form.save()
             return HttpResponseRedirect("/")
-        else:
-            return render(request, "registro.html", {"form": form,'username':request.user})
-    return render(request, "registro.html", {"form": UserCreationForm(),'username':request.user })
+        else: #form2": CadastroForms() esta abaixo apenas para testes, por horas nao remover
+            return render(request, "registro.html", {"form": form,"form2": CadastroForms(),'username':request.user})
+    return render(request, "registro.html", {"form": UserCreationForm(),"form2": CadastroForms(),'username':request.user })
 
 # ================ Tela central onde fica os menus =============================
 
