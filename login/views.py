@@ -7,14 +7,16 @@ from .forms import CadastroForms # importacao do formulario feito para ser vincu
 
 # ===============Formulario de login criado na pagina do index==================
 def index(request):
+    if  request.user.is_authenticated(): # Redireciona a central caso ja esteja lo
+        return redirect(central)
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid(): # verifica se e valido
             login(request, form.get_user())
             return HttpResponseRedirect("/central/")
         else:
-            return render(request, "index.html", {"form": form,'username':request.user})
-    return render(request, "index.html", {"form": AuthenticationForm(),'username':request.user})
+            return render(request, "index.html", {"form": form})
+    return render(request, "index.html", {"form": AuthenticationForm()})
 
 # ========== Formulario de registro criado na pagina do registro ===============
 
@@ -22,13 +24,13 @@ def registro(request):
     if not request.user.is_authenticated(): # Redireciona ao login caso nao esteja logado
         return redirect(index)
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CadastroForms(request.POST)
         if form.is_valid(): # verifica se e valido
             form.save()
             return HttpResponseRedirect("/")
-        else: #form2": CadastroForms() esta abaixo apenas para testes, por horas nao remover
-            return render(request, "registro.html", {"form": form,"form2": CadastroForms(),'username':request.user})
-    return render(request, "registro.html", {"form": UserCreationForm(),"form2": CadastroForms(),'username':request.user })
+        else:
+            return render(request, "registro.html", {"form": form,'username':request.user})
+    return render(request, "registro.html", {"form": CadastroForms(),'username':request.user })
 
 # ================ Tela central onde fica os menus =============================
 

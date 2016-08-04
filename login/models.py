@@ -2,7 +2,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
-
 #======= Banco de dados onde esta armasenada as informacoes do perfil ==========
 
 class Perfil(models.Model):
@@ -25,10 +24,9 @@ class Perfil(models.Model):
     estado = models.CharField(max_length=2,default="")
     cidade = models.CharField(max_length=200,default="")
     datacadastro = models.DateTimeField(auto_now_add=True)
-    foto = models.ImageField(upload_to='Perfil_img/%Y',default="")
+    foto = models.ImageField(upload_to='Perfil_img/%Y',null = True)
 
-    def __unicode__(self): #Usando apenas para indentificacao dos dados no admin do django
-        return self.nome
+
 
 #======== Usado para criar e  vincular o usuario criado ao seu perfil ==========
 
