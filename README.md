@@ -20,6 +20,8 @@ do usuario cadastrado.
 * 27/jun/2016: Implementado redirecionamento para a pagina de login caso o
 usuario não esteja logado
 
-* 28/jun/2016: Criado Tela de perfil não editavel 
+* 28/jun/2016: Criado Tela de perfil não editavel
 
-* 03/ago/2016: Criado modelo de form para usado em cunjunto do casdastro de usuario e modificado varios outros detalhes 
+* 03/ago/2016: Criado modelo de form para usado em cunjunto do casdastro de usuario e modificado varios outros
+
+* 04/ago/2016: Reformulado o formulario de cadastro de usuarios, implementado a opção de logout do sistema
