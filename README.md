@@ -26,4 +26,4 @@ usuario não esteja logado
 
 * 04/ago/2016: Reformulado o formulario de cadastro de usuarios, implementado a opção de logout do sistema
 
-* 09/ago/2016: Personalizado o templete provisorio da tela de login (index), index tounou-se um templete independente do base e outros detalhes simples.
+* 09/ago/2016: Personalizado o templete provisorio da tela de login (index), index tounou-se um templete independente do base e outros detalhes simples, adicionado o link para uso do admin do django
