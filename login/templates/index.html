@@ -1,9 +1,22 @@
-{% extends 'base.html' %}
-
-{% block content %}
-  <form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type='submit' value='Logar' />
-  </form>
-{% endblock content %}
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Force </title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  </head>
+  <body>
+    <!-- Cria o form no templete  -->
+    <img id="logo" src="{% static 'img/logo.png' %}"/> <!-- Coloca a imagem do logo  -->
+    <div id="LoginForm"> <!-- Div para editar o form com css  -->
+      <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+      <input type='submit' value='Logar' />
+    </form>
+    </div>
+  </body
+</html>

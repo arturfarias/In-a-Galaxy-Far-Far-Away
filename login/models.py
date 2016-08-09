@@ -13,7 +13,7 @@ class Perfil(models.Model):
     sobrenome = models.CharField(max_length=200,default="")
     sexo = models.CharField(max_length=1,choices=SEXO_C,default="N")
     datanascimento = models.CharField(verbose_name=u'Data de Nascimento',max_length=200,default="")
-    email = models.EmailField(max_length=200,default="")
+    email = models.EmailField(max_length=200,default="") # Usado no form, mas por algum motivo não posso remover
     telefone = models.CharField(max_length=9,default="")
     senha = models.CharField(max_length=30,default="")
     endereco = models.CharField(max_length=200, verbose_name=u'Endereço',default="")

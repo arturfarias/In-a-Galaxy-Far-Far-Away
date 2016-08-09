@@ -8,7 +8,7 @@
 
 ### Modificações ###
 
-* 26/jun/2016: Criado banco de danos no arquivo login/models.py.
+* 26/jun/2016: Criado banco de dados no arquivo login/models.py.
 
 * 27/jun/2016: Criado um novo banco de dados na forma de uma extenção do Perfil
 do usuario cadastrado.
@@ -25,3 +25,5 @@ usuario não esteja logado
 * 03/ago/2016: Criado modelo de form para usado em cunjunto do casdastro de usuario e modificado varios outros
 
 * 04/ago/2016: Reformulado o formulario de cadastro de usuarios, implementado a opção de logout do sistema
+
+* 09/ago/2016: Personalizado o templete provisorio da tela de login (index), index tounou-se um templete independente do base.

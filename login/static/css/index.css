@@ -1,0 +1,21 @@
+/*Trocando a cor do fundo, futuramente sera substituido por uma img */
+body{
+  background-color: #98FB98;
+}
+/* Posicionando o logo provisorio*/
+#logo{
+  margin-left: -250px;
+  position: absolute;
+  left: 50%;
+}
+/* posicionando o formulario de login */
+#LoginForm{
+  text-align: center;
+  width: 240px;
+  height: 300px;
+  margin-left: -100px;
+  margin-top: -100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
