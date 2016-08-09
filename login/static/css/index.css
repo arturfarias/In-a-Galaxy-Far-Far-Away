@@ -1,6 +1,6 @@
-/*Trocando a cor do fundo, futuramente sera substituido por uma img */
+/*Tcoloca a imagem do fundo, ainda não sei como pegar a imagem em outro local */
 body{
-  background-color: #98FB98;
+   background-image: url(fundo.jpg);
 }
 /* Posicionando o logo provisorio*/
 #logo{
@@ -18,4 +18,17 @@ body{
   position: absolute;
   top: 50%;
   left: 50%;
+}
+/* posiciona o rodapé */
+footer{
+  position:absolute;
+	bottom:0;
+	width:100%;
+  text-align: center;
+  padding-left: 50;
+}
+
+/* Muda a cor dos links do rodapé */
+footer a {
+  color: black;
 }
