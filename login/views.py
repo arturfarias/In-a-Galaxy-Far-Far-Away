@@ -3,7 +3,6 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login
 from .models import Perfil # importando as informacoes do banco de dados criado na models
-from .forms import CadastroForms # importacao do formulario feito para ser vinculado ao usuario
 
 # ===============Formulario de login criado na pagina do index==================
 def index(request):
@@ -23,11 +22,15 @@ def index(request):
 def central(request):
      if not request.user.is_authenticated():  # Redireciona ao login caso nao esteja logado
         return redirect(index)
-     return render(request,"central.html",{'username':request.user})
+     return render(request,"central.html")
 
 # ================== Tela onde fica as informacoes do usuario ==================
 def perfil(request):
      if not request.user.is_authenticated():  # Redireciona ao login caso nao esteja logado
         return redirect(index)
-     return render(request,"perfil.html",{'username':request.user,
-                                          'perfil':request.user.perfil})
+     return render(request,"perfil.html",{'perfil':request.user.perfil})
+
+def editar (request):
+    if not request.user.is_authenticated():
+        return redirect(index)
+    return render (request,"templete.html")
