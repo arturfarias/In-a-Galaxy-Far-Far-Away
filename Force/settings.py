@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'login', # aplicacao de login adicionada
+    'AdminFunction',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import CadastroLab
 
-# Register your models here.
+##================= Adicionando aplicacoes ao admin django =====================
+admin.site.register(CadastroLab)
