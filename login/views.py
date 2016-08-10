@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login
 from .models import Perfil # importando as informacoes do banco de dados criado na models
 from .forms import CadastroForms # importacao do formulario feito para ser vinculado ao usuario
-from django.contrib.admin.views.decorators import staff_member_required
+
 # ===============Formulario de login criado na pagina do index==================
 def index(request):
     if  request.user.is_authenticated(): # Redireciona a central caso ja esteja lo
@@ -17,20 +17,6 @@ def index(request):
         else:
             return render(request, "index.html", {"form": form})
     return render(request, "index.html", {"form": AuthenticationForm()})
-
-# ========== Formulario de registro criado na pagina do registro ===============
-@staff_member_required
-def registro(request):
-    if not request.user.is_authenticated(): # Redireciona ao login caso nao esteja logado
-        return redirect(index)
-    if request.method == 'POST':
-        form = CadastroForms(request.POST)
-        if form.is_valid(): # verifica se e valido
-            form.save()
-            return HttpResponseRedirect("/")
-        else:
-            return render(request, "registro.html", {"form": form,'username':request.user})
-    return render(request, "registro.html", {"form": CadastroForms(),'username':request.user })
 
 # ================ Tela central onde fica os menus =============================
 
