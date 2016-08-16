@@ -2,7 +2,7 @@ from django.shortcuts import  render, redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login
-from .models import Perfil # importando as informacoes do banco de dados criado na models
+from .forms import EditPerfilForm
 
 # ===============Formulario de login criado na pagina do index==================
 def index(request):
@@ -28,9 +28,21 @@ def central(request):
 def perfil(request):
      if not request.user.is_authenticated():  # Redireciona ao login caso nao esteja logado
         return redirect(index)
-     return render(request,"perfil.html",{'perfil':request.user.perfil})
+     return render(request,"perfil.html")
 
 def editar (request):
     if not request.user.is_authenticated():
         return redirect(index)
-    return render (request,"templete.html")
+
+    context = {}
+    if request.method == 'POST':
+        form = EditPerfilForm(request.POST, instance = request.user)
+        if form.is_valid():
+            form.save()
+            form = EditPerfilForm(instance=request.user)
+            context['success'] = True
+    else:
+        form = EditPerfilForm(instance=request.user)
+    context['form'] = form
+
+    return render (request,"editar.html",context)

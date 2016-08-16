@@ -1,0 +1,18 @@
+{% extends 'perfil.html' %}
+
+{% block Perfil_content %}
+<form  method="post">
+  {%  csrf_token %}
+  {% if success %}
+  <p>Dados alterados </p>
+  {% endif %}
+
+  {{ form.non_field_errors}}
+  {% for field in form %}
+    {{field.label_tag }}
+    {{field}}
+    {{field.errors}}
+  {% endfor %}
+  <button type="submit">Alterar</button>
+</form>
+{% endblock %}

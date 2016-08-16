@@ -1,26 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <div class="container">
-<p>
-  <h2>Informações do usuário</h2>
-  <p> <a href="#">Editar Perfil</a></p>
+  <p> <a href="/">Perfil</a></p>
+  <p> <a href="editar/">Editar conta</a></p>
+  <p> <a href="/">Editar senha</a></p>
+</div>
 
-
-  <br>Username: {{user}}</br>
-  <br>Nome: {{perfil.nome}}</br>
-  <br>Sexo: {{perfil.sexo}}</br>
-  <br>Data de Nascimento: {{perfil.datanascimento}}</br>
-  <br>Email: {{user.email}}</br>
-  <br>Telefone: {{perfil.telefone}}</br>
-  <br>Endereço: {{perfil.endereco}}</br>
-  <br>Número: {{perfil.numero}}</br>
-  <br>Complemento: {{perfil.complemento}}</br>
-  <br>Cep: {{perfil.cep}}</br>
-  <br>Bairro: {{perfil.bairro}}</br>
-  <br>Estado: {{perfil.estado}}</br>
-  <br>Cidade: {{perfil.cidade}}</br>
-  <br>Foto: {{perfil.foto}}</br>
-</p>
+<div class="Conteudo_perfil">
+  {% block Perfil_content %}
+  <p>Usuário: {{ user }}</p>
+  <p>E-mail: {{ user.email }}</p>
+  <p>Nome: {{ user.first_name }}</p>
+  <p>Sobrenome: {{ user.last_name }}</p>
+  {% endblock %}
 </div>
 {% endblock content %}

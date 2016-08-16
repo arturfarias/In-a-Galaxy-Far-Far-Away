@@ -6,4 +6,5 @@ urlpatterns = [
     url(r'^central/$', views.central), #Pagina central do aplicativo
     url(r'^central/perfil/$', views.perfil), #Pagina do perfl do usuario
     url(r'^sair/$', 'django.contrib.auth.views.logout',{'next_page':'index'},name='logout'), #usado para deslogar
+    url(r'^central/perfil/editar/$', views.editar),
 ]
