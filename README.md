@@ -29,3 +29,5 @@ usuario não esteja logado
 * 09/ago/2016: Personalizado o templete provisorio da tela de login (index), index tounou-se um templete independente do base e outros detalhes simples, adicionado o link para uso do admin do django
 
 * 10/ago/2016: Remorido e corrigido pequenos deifeitos do index, adicionado o cadastro de laboratorios no admin base do django
+
+* 16/ago/2016: Removido modelo de banco de dados que estava sem uso, adicionado perfil do usuario e possibilidade de mudar os dados.
