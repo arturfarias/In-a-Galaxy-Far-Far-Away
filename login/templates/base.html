@@ -20,8 +20,9 @@
         {% if user.is_staff %}
           <p> tela do admin django <a href="/admin">Admin</a></p>
         {% endif %}
-        <p> Tela de login <a href="/">Login</a></p>
-        <p> Tela de perfil <a href="perfil/">Perfil</a></p>
+        <p> <a href="{% url 'perfil' %}"> Perfil </a></p>
+        <p> <a href=""> Cadastro de itens </a></p>
+        <p> <a href=""> Lista de problemas </a></p>
       </div>
 
       <div class="content container">

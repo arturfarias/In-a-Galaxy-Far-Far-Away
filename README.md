@@ -30,8 +30,4 @@ usuario não esteja logado
 
 * 10/ago/2016: Remorido e corrigido pequenos deifeitos do index, adicionado o cadastro de laboratorios no admin base do django
 
-* 16/ago/2016: Removido modelo de banco de dados que estava sem uso, adicionado perfil do usuario e possibilidade de mudar os dados.
-
-* 16/ago/2016: Criado nova aplicação para o admin. Novo banco de dados.
-
-* 16/ago/2016: Criado sistema de troca de senha (bug de mostrar por padrão a senha antiga foi detectado )
+* 16/ago/2016: Removido modelo de banco de dados que estava sem uso, adicionado perfil do usuario e possibilidade de mudar os dados. Criado nova aplicação para o admin. Novo banco de dados. Criado sistema de troca de senha (bug de mostrar por padrão a senha antiga foi detectado ). Resolvido bug que dava erro ao clicar em um link de um local onde ja estivesse 
