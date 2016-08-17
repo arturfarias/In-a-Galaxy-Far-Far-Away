@@ -2,11 +2,12 @@
 
 {% block content %}
 
-<div class="container">
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="{% url 'perfil' %}"> Perfil </a></li>
+  <li role="presentation"><a href="{% url 'editar' %}"> Editar Perfil </a></li>
+  <li role="presentation"><a href="{% url 'trocarsenha' %}"> Mudar senha </a></li>
+</ul>
 
-  <p>  <a href="{% url 'editar' %}"> Editar Perfil </a></p>
-  <p>  <a href="{% url 'trocarsenha' %}"> Mudar senha </a></p>
-</div>
 
 <div class="Conteudo_perfil">
   {% block Perfil_content %}

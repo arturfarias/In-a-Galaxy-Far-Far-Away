@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <title>The Force </title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
   <body>
@@ -16,14 +14,14 @@
             <br><a href={%url 'logout'%}>Sair</a></br>
       </div>
 
-      <div class="container">
+      <ul class="nav nav-pills nav-stacked">
         {% if user.is_staff %}
-          <p> tela do admin django <a href="/admin">Admin</a></p>
+          <li role="presentation" class="active"><a href="/admin">Admin</a></li>
         {% endif %}
-        <p> <a href="{% url 'perfil' %}"> Perfil </a></p>
-        <p> <a href=""> Cadastro de itens </a></p>
-        <p> <a href=""> Lista de problemas </a></p>
-      </div>
+        <li role="presentation"><a href="{% url 'perfil' %}"> Perfil </a></li>
+        <li role="presentation"><a href=""> Cadastro de itens </a></li>
+        <li role="presentation"><a href=""> Lista de problemas </a></li>
+      </ul>
 
       <div class="content container">
           <div class="row">
