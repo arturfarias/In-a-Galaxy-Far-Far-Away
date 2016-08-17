@@ -33,3 +33,5 @@ usuario não esteja logado
 * 16/ago/2016: Removido modelo de banco de dados que estava sem uso, adicionado perfil do usuario e possibilidade de mudar os dados.
 
 * 16/ago/2016: Criado nova aplicação para o admin. Novo banco de dados.
+
+* 16/ago/2016: Criado sistema de troca de senha (bug de mostrar por padrão a senha antiga foi detectado )
