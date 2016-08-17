@@ -9,24 +9,11 @@ body {
   left: 50%;
 }
 
-
-#FieldErro{
-  height: 20px;
-  position:absolute;
-  top:40%;
-  left:20%;
-}
-
 #Form{
   text-align: center;
-  width: 240px;
+  width: 340px;
   height: 300px;
   position:absolute;
-  top:50%;
-  left:43%;
-}
-
-ul li{
- list-style-type: none;
- padding-right: : 0;
+  top:35%;
+  left:40%;
 }

@@ -1,3 +1,30 @@
-h1 {
-    text-align: center;
+body{
+  background-color: #DFF0D8;
+}
+
+#logo {
+  padding-top: 25px;
+margin-right: 25%;
+}
+
+#head{
+  padding-top: 10;
+  text-align: right;;
+padding-right: 30;
+background-color: #DFF0D8;
+margin-top: -21;
+height: 100px
+}
+
+#menugeral{
+  float: left;
+  width: 15%;
+  height: 500px;
+  background-color: white;
+margin-left: 10px;
+border-radius: 10px;
+}
+.form{
+  background-color: white;
+  padding: 10px;
 }

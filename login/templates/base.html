@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
   <body>
-      <div class="page-header">
-          <h1><a href="/">The force</a></h1>
-
-            <br>Logado Com: {{user}}</br>
-            <br><a href={%url 'logout'%}>Sair</a></br>
+      <div id="head">
+          <img id="logo" src="{% static 'img/logo.png' %}"width="320" height="100"/>
+          Logado Com: {{user}}
+          <a href={%url 'logout'%}>
+          <button  type="button" class="btn btn-default" aria-label="Left Align">
+            <span class="glyphicon glyphicon-off" aria-hidden="true"></span> Sair
+          </button>
+        </a>
       </div>
-
+      <div id="menugeral">
       <ul class="nav nav-pills nav-stacked">
         {% if user.is_staff %}
           <li role="presentation" class="active"><a href="/admin">Admin</a></li>
@@ -22,11 +25,12 @@
         <li role="presentation"><a href=""> Cadastro de itens </a></li>
         <li role="presentation"><a href=""> Lista de problemas </a></li>
       </ul>
-
+    </div>
       <div class="content container">
           <div class="row">
               <div class="col-md-8">
               {% block content %}
+              
               {% endblock %}
               </div>
           </div>
