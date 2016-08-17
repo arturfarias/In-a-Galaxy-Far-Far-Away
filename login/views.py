@@ -29,7 +29,7 @@ def perfil(request):
      if not request.user.is_authenticated():  # Redireciona ao login caso nao esteja logado
         return redirect(index)
      return render(request,"perfil.html")
-
+# ================== Tela para editar as informacoes do usuario ==================
 def editar (request):
     if not request.user.is_authenticated():
         return redirect(index)
@@ -39,14 +39,14 @@ def editar (request):
         form = EditPerfilForm(request.POST, instance = request.user)
         if form.is_valid():
             form.save()
-            
+
             context['success'] = True
     else:
         form = EditPerfilForm(instance=request.user)
     context['form'] = form
 
     return render (request,"editar.html",context)
-
+# ================== Tela mudar a senha do usuario ==================
 def trocarsenha(request):
     if not request.user.is_authenticated():
         return redirect(index)
