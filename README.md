@@ -4,7 +4,8 @@
 
 * Python 2.7.11
 * Django 1.7.5
-
+* Bootstrap 3
+* bootstrap-form
 
 ### Modificações ###
 
@@ -32,4 +33,4 @@ usuario não esteja logado
 
 * 16/ago/2016: Removido modelo de banco de dados que estava sem uso, adicionado perfil do usuario e possibilidade de mudar os dados. Criado nova aplicação para o admin. Novo banco de dados. Criado sistema de troca de senha (bug de mostrar por padrão a senha antiga foi detectado ). Resolvido bug que dava erro ao clicar em um link de um local diferente do padrão.
 
-17/ago/2016: Modificado formularios usando bootstrap, pequenos erros corigidos 
+* 17/ago/2016: Modificado formularios usando bootstrap, pequenos erros corigidos, modificados alguns aspectos da aparencia do projeto 
