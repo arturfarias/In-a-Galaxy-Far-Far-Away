@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'login', # aplicacao de login adicionada
     'Problems',
+    'bootstrapform',
 )
 
 MIDDLEWARE_CLASSES = (

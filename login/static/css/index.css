@@ -8,7 +8,7 @@ body {
   position: absolute;
   left: 50%;
 }
-  
+
 
 #FieldErro{
   height: 20px;
@@ -29,19 +29,4 @@ body {
 ul li{
  list-style-type: none;
  padding-right: : 0;
-}
-
-
-/* posiciona o rodapé */
-footer{
-  position:absolute;
-	bottom:0;
-	width:100%;
-  text-align: center;
-  padding-left: 50;
-}
-
-/* Muda a cor dos links do rodapé */
-footer a {
-  color: black;
 }

@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load bootstrap %}
 <html>
   <head>
     <meta charset="utf-8">
@@ -20,19 +21,11 @@
           {{form.non_field_errors}}
         </div>
         <div id="Form">
-          {% for field in form %}
-            {{field.label_tag}}
-            {{field}}
-            {{field.errors}}
-          {% endfor %}
-
+          {{ form | bootstrap }}
           <button type="submit">Entrar</button>
         </div>
 
         </fieldset>
       </form>
-    <footer>
-    <p> <a href="">Recuperar Senha </a></p>
-  </footer>
   </body
 </html>
