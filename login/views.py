@@ -1,6 +1,6 @@
 from django.shortcuts import  render, redirect
 from django.http import HttpResponseRedirect
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm,PasswordChangeForm
 from django.contrib.auth import login
 from .forms import EditPerfilForm
 
@@ -39,10 +39,25 @@ def editar (request):
         form = EditPerfilForm(request.POST, instance = request.user)
         if form.is_valid():
             form.save()
-            form = EditPerfilForm(instance=request.user)
+            
             context['success'] = True
     else:
         form = EditPerfilForm(instance=request.user)
     context['form'] = form
 
     return render (request,"editar.html",context)
+
+def trocarsenha(request):
+    if not request.user.is_authenticated():
+        return redirect(index)
+    context = {}
+    if request.method == 'POST':
+        form = PasswordChangeForm(data=request.POST, user=request.user)
+        if form.is_valid():
+            form.save()
+            context['success'] = True
+    else:
+        form = PasswordChangeForm(user=request.user)
+    context ['form'] = form
+
+    return render (request,"password.html",context)
