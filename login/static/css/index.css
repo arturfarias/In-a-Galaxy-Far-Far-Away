@@ -17,3 +17,8 @@ body {
   top:35%;
   left:40%;
 }
+
+.panel-success{
+  border-radius: 10px;
+
+}
