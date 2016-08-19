@@ -24,8 +24,9 @@
           <li role="presentation" class="active"><a href="/admin">Admin</a></li>
         {% endif %}
         <li role="presentation"><a href="{% url 'perfil' %}"> Perfil </a></li>
-        <li role="presentation"><a href=""> Cadastro de itens </a></li>
-        <li role="presentation"><a href=""> Lista de problemas </a></li>
+        <li role="presentation"><a href="{% url 'itens' %}"> Cadastro de itens </a></li>
+        <li role="presentation"><a href="{% url 'problemas' %}"> Cadastrar problemas </a></li>
+        <li role="presentation"><a href="{% url 'lista' %}"> Lista de problemas </a></li>
       </ul>
     </div>
       <div class="content container">

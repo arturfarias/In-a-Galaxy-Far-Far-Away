@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block content %}
+<div class="form">
+<form  method="post">
+  {%  csrf_token %}
+  {% if success %}
+  <p>Item cadastrado com sucesso! </p>
+  {% endif %}
+
+  {{ form | bootstrap }}
+  {{ form.non_field_errors}}
+  <button type="submit">Cadastrar</button>
+</form>
+</div>
+{% endblock %}
