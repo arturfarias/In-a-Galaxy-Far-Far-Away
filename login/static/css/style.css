@@ -26,6 +26,7 @@
   padding: 10px;
   border-radius: 0px 0px 10px 10px;
   margin-left: 0px;
+  word-wrap: break-word;
 }
 
 #divisa{

@@ -1,9 +1,13 @@
 {% extends 'perfil.html' %}
 
 {% block content %}
+<div id="cubo">
+
+
 <div class="form">
         <h1>{{ post.equipamento }}</h1>
-         <a class="btn btn-default" href="#">Editar<span class="glyphicon glyphicon-pencil"></span></a>
+         <a class="btn btn-default" href="edit/">Editar<span class="glyphicon glyphicon-pencil"></span></a>
         <p>{{ post.descricao|linebreaksbr }}</p>
+</div>
 </div>
 {% endblock %}
