@@ -5,9 +5,9 @@
     <b>Lista de Problemas</b> <p></p>
 
     <tbody>
-        {% for problem in objetos %}
+        {% for post in objetos.reverse %}
         <ul class="nav nav-pills">
-            <li role="presentation"><a href="#">{{ problem }}</a></li>
+            <li role="presentation"><a href="{% url 'list_detail' pk=post.pk %}">{{post.equipamento}}</a></li>
         </ul>
         {% endfor %}
     </tbody>

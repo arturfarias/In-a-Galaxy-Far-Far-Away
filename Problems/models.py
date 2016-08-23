@@ -4,7 +4,7 @@ from django.db.models.signals import pre_save
 from django.dispatch.dispatcher import receiver
 
 class Equipamento(models.Model):
-	
+
 	laboratorio = models.CharField(
 		choices=(
 			('LECC1', 'LECC1'),
@@ -22,7 +22,7 @@ class Equipamento(models.Model):
 	)
 	class Meta:
 		ordering = ['laboratorio', 'numero_de_Serie']
-	
+
 	def __unicode__ (self):
 		return "%d | %s | %8s" %(self.numero_de_Serie, self.tipo_de_Equipamento, self.laboratorio)
 
