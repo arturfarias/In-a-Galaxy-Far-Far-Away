@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from .forms import CadastroItens,ListaProblema
+from .models import Problema
 
 def cadastro_itens(request):
      if not request.user.is_authenticated():
@@ -35,4 +36,7 @@ def problemas(request):
 def lista(request):
      if not request.user.is_authenticated():
          return redirect(index)
-     return render (request,"lista.html")
+
+     variavel = Problema.objects.all()
+
+     return render(request,"lista.html",{'objetos':variavel})

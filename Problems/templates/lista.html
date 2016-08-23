@@ -1,6 +1,14 @@
-{% extends 'base.html' %}
-{% load bootstrap %}
+{% extends 'problemas.html' %}
 
 {% block content %}
+    <b>Lista de Problemas</b> <p></p>
+
+    <tbody>
+        {% for problem in objetos %}
+            <p>
+                <a href="{% url 'index' %}"> <td> {{ problem }} </td> </a>
+            </p>
+        {% endfor %}
+    </tbody>
 
 {% endblock %}

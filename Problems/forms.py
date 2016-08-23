@@ -9,4 +9,4 @@ class CadastroItens(forms.ModelForm):
 class ListaProblema(forms.ModelForm):
     class Meta:
         model = Problema
-        fields = ['equipamento','descricao']
+        fields = ['equipamento', 'problema_Resolvido', 'descricao']
