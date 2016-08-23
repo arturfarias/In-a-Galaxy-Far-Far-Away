@@ -1,14 +1,23 @@
-{% extends 'problemas.html' %}
+{% extends 'perfil.html' %}
 
 {% block content %}
+<div class="form">
     <b>Lista de Problemas</b> <p></p>
 
     <tbody>
         {% for problem in objetos %}
-            <p>
-                <a href="{% url 'index' %}"> <td> {{ problem }} </td> </a>
-            </p>
+        <ul class="nav nav-pills">
+            <li role="presentation"><a href="#">{{ problem }}</a></li>
+        </ul>
         {% endfor %}
     </tbody>
 
 {% endblock %}
+
+
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+</ul>
+</div>
