@@ -51,7 +51,7 @@ def list_edit(request, pk):
         form = EditarProblema(request.POST, instance=post)
         if form.is_valid():
             post.save()
-            return redirect('list_detail', pk=post.pk)
+            return redirect('lista')
     else:
         form = EditarProblema(instance=post)
     return render(request, 'list_edit.html', {'form': form})

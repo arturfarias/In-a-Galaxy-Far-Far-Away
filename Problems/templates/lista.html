@@ -5,9 +5,14 @@
     <b>Lista de Problemas</b> <p></p>
 
     <tbody>
-        {% for post in objetos.reverse %}
+        {% for post in objetos %}
         <ul class="nav nav-pills">
-            <li role="presentation"><a href="{% url 'list_detail' pk=post.pk %}">{{post.equipamento}}</a></li>
+          {% if post.problema_Resolvido %}
+            <li role="presentation"><a href="{% url 'list_detail' pk=post.pk %}">RESOLVIDO {{post.equipamento}}</a></li>
+          {% else %}
+              <li role="presentation"><a href="{% url 'list_detail' pk=post.pk %}">EM ANDAMENTO {{post.equipamento}}</a></li>
+          {% endif %}
+
         </ul>
         {% endfor %}
     </tbody>
