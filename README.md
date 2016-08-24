@@ -36,3 +36,5 @@ usuario não esteja logado
 * 17/ago/2016: Modificado formularios usando bootstrap, pequenos erros corigidos, modificados alguns aspectos da aparencia do projeto
 
 * 23/ago/2016: Terminado a lista com os itens cadastrados, implementado a pocibilidade de modificar os itens cadastrados 
+
+* 24/ago/2016: Beta terminado 
