@@ -12,7 +12,7 @@ class Equipamento(models.Model):
 		), max_length = 20
 	)
 
-	numero_de_Serie = models.IntegerField(unique=True)
+	numero_de_Serie = models.CharField(unique=True,max_length=10)
 	tipo_de_Equipamento = models.CharField(
 		choices=(
 			(u'gabinete', "Gabinete"),
@@ -29,7 +29,7 @@ class Equipamento(models.Model):
 class Problema(models.Model):
 
 	problema_Resolvido = models.BooleanField(default=False)
-	equipamento = models.ForeignKey(Equipamento)
+	equipamento = models.ForeignKey(Equipamento,unique=True)
 	descricao = models.TextField()
 
 	class Meta:
@@ -41,13 +41,3 @@ class Problema(models.Model):
 			return "RESOLVIDO"
 		else:
 			return "EM ANDAMENTO %s" %(self.equipamento)
-
-@receiver(pre_save, sender=Problema)
-def handler_limitar_problema(sender, instance, **kwargs):
-	equipamento = instance.equipamento
-
-	if not instance.problema_Resolvido:
-		retorno = equipamento.problema_set.filter(problema_Resolvido=False)
-
-		if retorno:
-			raise ValidationError("Erro interno")
