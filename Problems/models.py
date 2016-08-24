@@ -24,7 +24,7 @@ class Equipamento(models.Model):
 		ordering = ['laboratorio', 'numero_de_Serie']
 
 	def __unicode__ (self):
-		return "%d | %s | %8s" %(self.numero_de_Serie, self.tipo_de_Equipamento, self.laboratorio)
+		return "%s | %s | %8s" %(self.numero_de_Serie, self.tipo_de_Equipamento, self.laboratorio)
 
 class Problema(models.Model):
 
